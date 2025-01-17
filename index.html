@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cakes Heaven</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1 class="header">
+        <a href="" class="logo"><img src="images/logo.jpg"></a>
+        <nav class="navbar">
+            <a href="#home" > Home </a>
+            <a href="#menu" >menu</a>
+            <a href="#about" >about</a>
+            <a href="#reviews" >reviews</a>
+            <a href="#contact" >contact</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+         </div>
+
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="cart-items-container"></div>
+            <div class="total"> total: $0 </div>
+            <a href="#order" class="btn">checkout</a>
+        </div>
+
+        <form class="login-form" action="login.php" method="POST">
+            <h3>Login Now</h3>
+            <input type="email" name="email" placeholder="Enter your email" class="box" required>
+            <input type="password" name="password" placeholder="Enter your password" class="box" required>
+            <input type="submit" value="Login Now" class="btn" name="login">
+        </form>
+        
+    </h1>
+
+<section class="home" id="home">
+    <div class="greetings">
+        <h3>Welcome to Lara bakery!</h3>
+        <p>Delightful cakes, cheesecakes, and pastries made fresh every day. Indulge in heavenly treats!</p>
+        <a href="#menu" class="btn">shop now</a>
+    </div>
+</section>
+
+
+<section class="products" id="menu">
+
+    <h1 class="heading"><span> Menu</span></h1>
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/chocolate cake.jpg" alt="Chocolate cake">
+                <h3>Chocolate Cake</h3>
+                <div class="price"> $15 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Chocolate Cake" data-price="15">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img src="images/red velvet.jpg" alt="">
+                <h3>Red Velvet Cake</h3>
+                <div class="price"> $18 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Red Velvet Cake" data-price="18">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img src="images/vanicake.jpg" alt="">
+                <h3>Vanilla Cake</h3>
+                <div class="price"> $17 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Vanilla Cake" data-price="17">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/chocolate_cheesecake.jpg" alt="">
+                <h3>Chocolate cheesecake</h3>
+                <div class="price"> $15 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Chocolate cheesecake" data-price="15">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img src="images/classic_cheesecake.jpg" alt="">
+                <h3>Classic cheesecake</h3>
+                <div class="price"> $17 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Classic cheesecake" data-price="17">Add to Cart</button>
+            </div>
+
+            <div class="box">
+                <img src="images/strawberry_cheesecake.jpg" alt="">
+                <h3>Strawberry cheesecake</h3>
+                <div class="price"> $18 </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <button class="btn add-to-cart" data-name="Strawberry cheesecake" data-price="18">Add to Cart</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section class="order" id="order"> 
+    <form class="order-form" action="process_order.php" method="POST">
+        <h2>Place Your Order</h2>
+        <div class="form-group">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+            <label for="surname">Last Name:</label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your last name" required>
+        </div>
+        <div class="form-group">
+            <label for="card">Card Number:</label>
+            <input type="text" id="card" name="card" placeholder="Enter your card number" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Order Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Order Time:</label>
+            <input type="time" id="time" name="time" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit Order">
+        </div>
+    </form>
+</section>
+    <section class="about" id="about">
+        <div class="about-content">
+            <img src="images/int2.jpg" alt="Bakery Image" class="about-img">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Lara Bakery! We are passionate about crafting the most delightful cakes, pastries, and baked goods. 
+                Each treat is made with love, using fresh and high-quality ingredients. Whether it's a celebration or a sweet craving, 
+                we're here to make your day special. Please, do not forget to visit our bakery!
+            </p>
+        </div>
+    </section>
+    
+    <section id="reviews" class="reviews">
+        <h2>Customer Reviews</h2>
+    
+        <div class="review">
+            <img src="images/aimira.jpg" alt="Emily R." class="review-img">
+            <div class="review-text">
+                <p>"The chocolate cake was absolutely amazing! Fresh and moist. Will order again!"</p>
+                <h4>- Aimira K.</h4>
+            </div>
+        </div>
+    
+        <div class="review">
+            <img src="images/bereke.jpg" alt="James L." class="review-img">
+            <div class="review-text">
+                <p>"Best cheesecake I've ever had. Highly recommend this bakery!"</p>
+                <h4>- Bereke B.</h4>
+            </div>
+        </div>
+    
+        <div class="review">
+            <img src="images/elina.jpg" alt="Sophia W." class="review-img">
+            <div class="review-text">
+                <p>"Friendly staff, great prices, and delicious pastries. Love this place!"</p>
+                <h4>- Elina K.</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p><strong>📍 Address:</strong> CONTRADA PAPARDO SPERONE, 31, 98100 Messina ME</p>
+            <p><strong>📞 Phone:</strong> +39 123 456 789</p>
+            <p><strong>✉️ Email:</strong> info@larabakery.com</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Lara Bakery. All rights reserved.</p>
+    </footer>
+
+        <script src="script.js"></script>
+        
+</body>
+</html>
