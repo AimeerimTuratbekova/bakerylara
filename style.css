@@ -223,7 +223,7 @@ body{
     min-height: 80vh;
     padding-right: 5%; /* Adds spacing from the right edge */
     background-color: #fdf1f0;
-    background-image: url("/images/cherries.jpg");
+    background-image: url("/images/cake1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -251,6 +251,7 @@ body{
     margin-top: 1rem; /* Add spacing below the heading */
     margin-bottom: 20px;
 }
+
 
 .products .heading span{
     display: flex;
